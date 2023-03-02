@@ -80,12 +80,12 @@ def configuration(api_key: str, batch_info: BatchInfo):
 
 @pytest.fixture(scope='function')
 def eyes(
-  runner: VisualGridRunner,
+  runner: ClassicRunner,
   configuration: Configuration,
   page: Page,
   request: pytest.FixtureRequest):
   """
-  Creates the Applitools Eyes object connected to the VisualGridRunner and set its configuration.
+  Creates the Applitools Eyes object connected to the ClassicRunner and set its configuration.
   Then, opens Eyes to start visual testing before the test, and closes Eyes at the end of the test.
   
   Opening Eyes requires 4 arguments:
